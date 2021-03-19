@@ -1,0 +1,93 @@
+{
+	"extends": "Merge.sublime-theme",
+	"variables":
+	{
+		// Color
+		"black": "hsl(0, 0%, 0%)",
+		"white3": "hsl(210, 11%, 93%)",
+		// Font face
+		"font_face": "IBM Plex Mono Regular",
+		// Detail panel
+		"detail_panel_bg": "var(white3)",
+		// Hazard buttons
+		"hazard_button_shadow": "color(var(black) a(0))",
+		// Diff headers
+		"hunk_button_fg": "var(white3)",
+		"hunk_button_shadow": "color(black a(0.5))",
+		"hunk_header_bg": "color(var(--background) l(+ 11%))",
+
+		"full_context_icon_bg": "var(medium_gray-light)",
+
+		// Buttons
+		"button_shadow2": "color(black a(0))",
+		"toggle_button_fg2": "#aaa",
+		"toggle_button_fg_selected2": "#ddd",
+	},
+	"rules": 
+	[
+		{
+			"class": "label_control",
+			"parents":[{"class": "file_diff_hunk_header"}],
+			"fg": "#aaa",
+			"font.face": "var(font_face)",
+			"font.size": "var(font_size)"
+		},
+		{
+			"class": "label_control",
+			"parents":
+			[
+				{"class": "file_diff_hunk_container"},
+				{"class": "hunk_button", "attributes": ["!confirm"]}
+			],
+			"fg": "color(var(hunk_button_fg) a(0))",
+			"shadow_offset": [0, 0]
+		},
+		{
+			"class": "label_control",
+			"parents":
+			[
+				{"class": "file_diff_hunk_container", "attributes": ["hover"]},
+				{"class": "hunk_button", "attributes": ["!confirm"]}
+			],
+			"fg": "var(hunk_button_fg)",
+			"shadow_color": "var(hunk_button_shadow)",
+			"shadow_offset": [0, 1]
+		},
+		{
+			"class": "label_control",
+			"parents":
+			[
+				{"class": "file_diff_hunk_header", "attributes": ["selected"]},
+				{"class": "hunk_button", "attributes": ["!confirm"]}
+			],
+			"fg": "var(hunk_button_fg)",
+			"shadow_color": "var(hunk_button_shadow)",
+			"shadow_offset": [0, 1]
+		},
+		{
+			"class": "label_control",
+			"parents": [
+				{"class": "file_diff_hunk_header"},
+				{"class": "toggle_button"}
+			],
+			"fg": "var(toggle_button_fg2)",
+			"shadow_color": "var(button_shadow2)",
+			"shadow_offset": [0, 1],
+		},
+		{
+			"class": "label_control",
+			"parents": [
+				{"class": "file_diff_hunk_header"},
+				{"class": "toggle_button", "attributes": ["selected"]}
+			],
+			"fg": "var(toggle_button_fg_selected2)",
+		},
+
+		{
+			"class": "git_output_data_container",
+			"layer0.tint": "#fcfdfd",
+			"layer0.opacity": 1.0,
+			"content_margin": [6, 6, 4, 6],
+		},
+	]
+}

@@ -1,0 +1,22 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+
+	"always_show_command_status": false,
+	"font_face": "IBM Plex Mono Regular",
+	"font_size": 12,
+	"line_padding_bottom": 2,
+	"line_padding_top": 0,
+	"margin": 4,
+	"side_bar_layout": "tabs",
+	"diff_style": "side-by-side",
+	"render_commit_dialog_message_at_top": true,
+	"expand_merge_commits_by_default": false,
+	"ignore_diff_white_space": false,
+	"image_diff_style": "side-by-side",
+	"theme": "Merge Dark.sublime-theme",
+	"caret_style": "solid",
+	"update_check": false,
+	"time_format": "system",
+	"hardware_acceleration": "none",
+}
